@@ -150,7 +150,7 @@ switch (true) {
 
 ```js
 (1,2,3);
-// return 3;
+// return 3
 ```
 
 ```js
@@ -160,14 +160,41 @@ switch (true) {
 
 ```js
 [1,2,3][1];
-// return 2;
+// return 2
 ```
 
 ```js
 [1,2,3][1,2];
-// return 3;
+// return 3
 ```
 
 逗号运算符，多个表达式可以用逗号隔开，其中用逗号隔开的表达式的值分别计算，但整个表达式的值时最后一个表达式的值。
 
+##JavaScript的闭包
 
+```js
+var foo = ( function() {
+    var bar = 'bar';
+    // "闭包" 内的函数可以访问 bar 变量，而 bar 变量对于外部却是隐藏的
+    return {
+        get_bar: function() {
+            return foo;
+        },
+        update_bar: function(new_bar) {
+            bar = new_bar;
+        }
+    };
+}() );
+
+foo.get_bar(); // get 'bar'
+foo.bar; // Error
+foo.update_bar('new bar'); //update bar
+foo.get_bar(); // get new bar
+```
+
+> 之所以可能通过这种方式在JavaScript种实现公有，私有，特权变量正是因为闭包，闭包是指在JavaScript中，内部函数总是可以访问其所在的外部函数中声明的参数和变量，即使在其外部函数被返回（寿命终结）了之后。
+
+需要注意的一点时，内部函数访问的是被创建的内部变量本身，而不是它的拷贝。所以在闭包函数内加入 loop 时要格外注意。另外当然的是，闭包特性也可以用于创建私有函数或方法。
+
+关于为什么在 JavaScript 中闭包的应用都有关键词“return”，引用 JavaScript 秘密花园中的一段话：
+> 闭包是 JavaScript 一个非常重要的特性，这意味着当前作用域总是能够访问外部作用域中的变量。 因为 函数 是 JavaScript 中唯一拥有自身作用域的结构，因此闭包的创建依赖于函数。
