@@ -145,3 +145,29 @@ switch (true) {
 };  
 ```
 以上内容来自[马铖](http://www.zhihu.com/people/mc-zone),感谢！
+
+##JavaScript中逗号的特性
+
+```js
+(1,2,3);
+// return 3;
+```
+
+```js
+(1,2,3,alert)("hello wolrd");
+// return "hello world"
+```
+
+```js
+[1,2,3][1];
+// return 2;
+```
+
+```js
+[1,2,3][1,2];
+// return 3;
+```
+
+逗号运算符，多个表达式可以用逗号隔开，其中用逗号隔开的表达式的值分别计算，但整个表达式的值时最后一个表达式的值。
+
+
