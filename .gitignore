@@ -3,3 +3,7 @@ Thumbs.db
 db.json
 *.log
 node_modules/
+<<<<<<< HEAD
+=======
+.deploy*/
+>>>>>>> dd85ce533d27e981ba8bcbbbe11e5275d6f15919
