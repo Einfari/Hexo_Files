@@ -7,10 +7,10 @@ title: 学而时习之
 subtitle: 程序猿,攻城狮,爱生活,爱编程。
 description: 知行合一 ｜ 编程 ｜ 记录 ｜ 随笔 ｜ Perl ｜ 前端 ｜ HTML ｜ CSS ｜ JavaScript
 author: 慕容羽兮
-avatar: /images/avatar.jpeg
+avatar: /images/avatar.jpg
 email: niuleipeng@gmail.com
 language: zh-Hans
-timezone: 
+timezone: UTC+08:00
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
