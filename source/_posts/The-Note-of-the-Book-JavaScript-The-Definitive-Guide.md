@@ -1,4 +1,4 @@
-title: "The Note of the Book <JavaScript: The Definitive GUide>"
+title: "The Note of the Book JavaScript: The Definitive Guide"
 date: 2015-08-10 11:06:45
 categories: 
 - 技术
@@ -43,3 +43,28 @@ in 運算符希望它的左操作數是一個字符串或者可以轉換爲字�
 instanceof 運算符希望它的左操作數是一個對象，右操作數是標識對象的類。如果左側的對象是右側的類的實例，返回true， 否則返回false。JavaScript 中對象的類是通過初始化它們的構造函數來定義的。 這樣的話，instanceof 的右操作數應當是一個函數。比如：
 
 {% gist 2b6d01396f06d7839cba %}
+
+
+## 語句
+
+JavaScript中主要包括兩類，表達式（expression）和語句（statement）。
+
+表達式在 JavaScript 中是短語， 那麼語句就是 JavaScript  的整句或者命令。
+
+表達式計算出一個值，但語句用來執行以使某件事情發生。
+
+### 聲明語句
+
+#### function
+
+##### 函數定義表達式
+
+{% gist 8a5d264a764765a58c53 %}
+
+與 var 定義的變量一樣，函數定義表達式的額聲明提前了，但是初始化還是在原來的位置，所以不能在初始化之前調用一個函數。
+
+##### 函數聲明語句
+
+{% gist 984002b12abda78458bf %}
+
+函數聲明語句，將函數的聲明與初始化都提前了，所以可以在函數聲明之前就調用這個函數。
