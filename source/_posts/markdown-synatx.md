@@ -2,8 +2,6 @@ title: "Markdown 语法"
 date: 2015-03-08 11:15:14
 categories:
 - 技术笔记
-tags:
-- 技术 Markdown
 tags: 
 - Markdown
 - 技术

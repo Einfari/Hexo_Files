@@ -1,7 +1,7 @@
 title: "How does JavaScript closures work"
 date: 2015-07-03 19:32:26
 categories: 
-- 技术
+- 技术笔记
 tags:
 - 技术
 - JavaScript

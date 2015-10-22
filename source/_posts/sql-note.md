@@ -1,7 +1,7 @@
 title: "SQL笔记"
 date: 2015-03-11 10:56:50
 categories:
--  技术笔记
+- 技术笔记
 tags: 
 - 技术
 - SQL

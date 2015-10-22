@@ -1,7 +1,7 @@
 title: "The Note of the Book JavaScript: The Definitive Guide"
 date: 2015-08-10 11:06:45
 categories: 
-- 技术
+- 技术笔记
 tags:
 - JavaScript
 photos:
