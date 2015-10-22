@@ -1,0 +1,634 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+    <meta name="description" content="知行合一 ｜ 编程 ｜ 记录 ｜ 随笔 ｜ Perl ｜ 前端 ｜ HTML ｜ CSS ｜ JavaScript" />
+
+
+
+  <meta name="keywords" content="CSS,技术," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="学而时习之" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-64460330-1'
+    },
+    sidebar: 'hide'
+  };
+</script>
+
+
+
+
+  <title> CSS笔记 // 学而时习之 </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">学而时习之</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            <i class="menu-item-icon icon-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            <i class="menu-item-icon icon-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              CSS笔记
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于 2015-03-09
+        </span>
+
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/categories/技术笔记/">技术笔记</a>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+        <div class="post-gallery">
+          
+            <a class="post-gallery-img fancybox" href="http://lniu.qiniudn.com/images/fancybox/006.jpg" rel="gallery_cid5qixjy001ee2zqtjaez9bf">
+              <img src="http://lniu.qiniudn.com/images/fancybox/006.jpg" />
+            </a>
+          
+        </div>
+      
+
+      
+        <h2 id="用Margin还是用Padding">用Margin还是用Padding</h2><h3 id="何时应当使用margin：">何时应当使用margin：</h3><ul>
+<li>需要在border外侧添加空白时。</li>
+<li>空白处不需要背景（色）时。</li>
+<li>上下相连的两个盒子之间的空白，需要相互抵消时。如15px + 20px的margin，将得到20px的空白。</li>
+</ul>
+<a id="more"></a>
+<h3 id="何时应当时用padding：">何时应当时用padding：</h3><ul>
+<li>需要在border内测添加空白时。</li>
+<li>空白处需要背景（色）时。</li>
+<li>上下相连的两个盒子之间的空白，希望等于两者之和时。如15px + 20px的padding，将得到35px的空白。<h2 id="margin在块元素、内联元素中的区别">margin在块元素、内联元素中的区别</h2></li>
+</ul>
+<p>HTML（这里说的是html标准，而不是xhtml）里分两种基本元素，即block和inline。顾名思义，block元素就是以”块”表现的元素（block-like elements），inline元素即是以”行”表现的元素（character level elements and text strings）。二者表现的主要差别在于，在页面文档中block元素另起一行开始，并独占一行。inline元素则同其它inline元素共处一行。</p>
+<p>block元素（块元素）大致有：P | H1 | H2 | H3 | H4 | H5 | H6 | UL | OL | PRE | DL | DIV | NOSCRIPT | BLOCKQUOTE | FORM | HR | TABLE | FIELDSET | ADDRESS(随着html5标准的推进，一些元素将被废除，而一些新的元素将被引入)注意的是并非所有的block元素的默认display属性都是block，像table这种display:table的元素也是block元素。</p>
+<p>inline元素（内联元素）大致有：#PCDATA（即文本）| TT | I | B | BIG | SMALL|EM | STRONG | DFN | CODE |SAMP | KBD | VAR | CITE | ABBR | ACRONYM|A | IMG | OBJECT | BR | SCRIPT | MAP | Q | SUB | SUP | SPAN | BDO|INPUT | SELECT | TEXTAREA | LABEL | BUTTON</p>
+<p>其中有类特殊的元素：如img | input | select | textarea | button | label等，它们被称为可置换元素（Replaced element）。它们区别一般inline元素（相对而言，称non-replaced element）是：这些元素拥有内在尺寸(intrinsic dimensions),它们可以设置width/height属性。它们的性质同设置了display:inline-block的元素一致。</p>
+<p>或许有朋友对非置换元素（non-replaced element）有点疑惑，稍微帮助大家理解一下。非置换元素，W3C 中没有给出明确的定义，但我们从字面可以理解到，非置换元素对应着置换元素（replaced element），也就是说我们搞懂了置换元素的含义，就懂了非置换元素。置换元素，W3C中给出了定义：</p>
+<blockquote>
+<p>An element that is outside the scope of the CSS formatter, such as an image, embedded document, or applet</p>
+</blockquote>
+<p>从定义中我们可以理解到，置换元素（replaced element）主要是指 img, input, textarea, select, object 等这类默认就有 CSS 格式化外表范围的元素。进而可知，非置换元素（non-replaced element）就是除了 img, input, textarea, select, object 等置换元素以外的元素。</p>
+<p>margin在块级元素下，它的性能可以完全体现，上下左右任你设定。且记住块级元素的margin的参照基准是前一个元素即相对于自身之前的元素有margin距离。如果元素是第一个元素，则就是相对于父元素的margin距离（但第一个元素相对于父元素margin-top而父元素又没有设定padding-top/border-top的话要需要印证上面的垂直外边距合并的知识）</p>
+<p>margin也能用于内联元素，这是规范所允许的，但是margin-top和margin-bottom对内联元素（对行）的高度没有影响，并且由于边界效果(margin效果)是透明的，它也没有任何的视觉影响。</p>
+<p>这是因为边界应用于内联元素时不改变元素的行高度，如果你要改变内联元素的行高即类似文本的行间距，那么你只能使用这三个属性：line-height，fong-size，vertical-align。请记住，这个影响内联元素高度的是line-height而不是height，因为内联元素是一行行的，定一个height的话，那这到底是整段inline元素的高呢？还是inline元素一行的高呢？这都说不准，所以统一都给每行定一个高，只能是line-height了。</p>
+<p>margin-top/margin-bottom对内联元素没有多大实际效果，不过margin-left/margin-right还是能够对内联元素产生影响的。应用margin:10px 20px 30px 40px;，左边这个css如果写在inline元素上，它的效果大致是，上下无效果，左边离它相邻元素或者文本距离为40px，右边离它相邻元素或者文本距离为20px。你可以自行尝试一番。</p>
+<p>最后在内联元素中还有上文我们提到的非可置换inline元素（non-replaced element），这些个元素img|input|select|textarea|button|label虽然是内联元素，但margin依旧可以影响到它的上下左右！</p>
+<p>总结下来margin 属性可以应用于几乎所有的元素，除了表格显示类型（不包括 table-caption, table and inline-table）的元素，而且垂直外边距对非置换内联元素（non-replaced inline element）不起作用。</p>
+<h2 id="常见的浏览器下margin出现的bug">常见的浏览器下margin出现的bug</h2><p>总结一些浏览器中常见的margin Bug吧，以后遇到margin下的布局问题可以查看这里找到解决的方案，如果你还发现其它关于浏览器下margin的Bug你可以发表留言，核对采纳后我会及时添加进去，感谢你的分享：</p>
+<h3 id="IE6中双边距Bug：">IE6中双边距Bug：</h3><p>发生场合：当给父元素内第一个浮动元素设置margin-left（元素float:left）或margin-right（元素float:right）时margin加倍。<br>解决方法：是给浮动元素加上display:inline;CSS属性；或者用padding-left代替margin-left。<br>原理分析：块级对象默认的display属性值是block，当设置了浮动的同时，还设置了它的外边距就会出现这种情况。也许你会问：“为什么之后的对象和第一个对象之间就不存在双倍边距的Bug”？因为浮动都有其相对应的对象，只有相对于其父对象的浮动对象才会出现这样的问题。第一个对象是相对父对象的，而之后对象是相对第一个对象的，所以之后对象在设置后不会出现问题。为什么display:inline可以解决这个双边距bug，首先是inline元素或inline-block元素是不存在双边距问题的。然后，float:left等浮动属性可以让inline元素haslayout，会让inline元素表现得跟inline-block元素的特性一样，支持高宽，垂直margin和padding等，所以div<br>class的所有样式可以用在这个display inline的元素上。</p>
+<h3 id="IE6中浮动元素3px间隔Bug：">IE6中浮动元素3px间隔Bug：</h3><p>发生场合：发生在一个元素浮动，然后一个不浮动的元素自然上浮与之靠近会出现的3px的bug。<br>解决方法：右边元素也一起浮动；或者为右边元素添加IE6 Hack _margin-left:-3px;从而消除3px间距。<br>原理分析：IE6浏览器缺陷Bug。</p>
+<h3 id="IE6/7负margin隐藏Bug：">IE6/7负margin隐藏Bug：</h3><p>发生场合：当给一个有hasLayout的父元素内的非hasLayout元素设置负margin时，超出父元素部分不可见。<br>解决方法：去掉父元素的hasLayout；或者赋hasLayout给子元素,并添加position:relative;<br>原理分析：IE6/7独有的hasLayout产生问题。</p>
+<h3 id="IE6/7下ul/ol标记消失bug：">IE6/7下ul/ol标记消失bug：</h3><p>发生场合：当ul/ol触发了haslayout并且是在ul/ol上写margin-left，前面默认的ul/ol标记会消失。<br>解决方法：给li设置margin-left，而不是给ul/ol设置margin-left。<br>原理分析：IE6/7浏览器Bug</p>
+<h3 id="IE6/7下margin与absolute元素重叠bug：">IE6/7下margin与absolute元素重叠bug：</h3><p>发生场合：双栏自适应布局中，左侧元素absolute绝对定位，右侧的margin撑开距离定位。在IE6/7下左侧应用了absolute属性的块级元素与右边的自适应的文字内容重叠。<br>解决方法：把左侧块级元素更改为内联元素，比如把div更换为span。<br>原理分析：这是由于IE6/IE7浏览器将inline水平标签元素和block水平的标签元素没有加以区分一视同仁渲染了。属于IE6/7浏览器渲染Bug。</p>
+<h3 id="IE6/7/8下auto_margin居中bug：">IE6/7/8下auto margin居中bug：</h3><p>发生场合：给block元素设置margin auto无法居中<br>解决方法：出现这种bug的原因通常是没有Doctype，然后触发了ie的quirks mode，加上Doctype声明就可以了。在《打败IE的葵花宝典》里给出的方法是给block元素添加一个width能够解决，但根据本人亲测，加with此种方法是无效的，如果没有Doctype即使给元素添加width也无法让block元素居中。<br>原理分析：缺少Doctype声明。</p>
+<h3 id="IE8下input[button_|_submit]_设置margin:auto无法居中">IE8下input[button | submit] 设置margin:auto无法居中</h3><p>发生场合：ie8下，如果给像button这样的标签（如button input[type=”button”] input[type=”submit”]）设置{ display: block; margin:0 auto; }如果不设置宽度的话无法居中。<br>解决方法：可以给为input加上宽度<br>原理分析：IE8浏览器Bug。</p>
+<h3 id="IE8百分比padding垂直margin_bug：">IE8百分比padding垂直margin bug：</h3><p>发生场合：当父元素设置了百分比的padding，子元素有垂直的margin的时候，就好像父元素被设置了margin一样。<br>解决方法：给父元素加一个overflow:hidden/auto。<br>原理分析：IE8浏览器Bug。</p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/"> #CSS </a>
+          
+            <a href="/tags/技术/"> #技术 </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/03/09/js-note/">JavaScript笔记</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/03/08/html-note/">HTML学习笔记</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="/images/avatar.jpg" alt="慕容羽兮" />
+          <p class="site-author-name">慕容羽兮</p>
+        </div>
+        <p class="site-description motion-element">知行合一 ｜ 编程 ｜ 记录 ｜ 随笔 ｜ Perl ｜ 前端 ｜ HTML ｜ CSS ｜ JavaScript</p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/saturnast" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/saturnast" target="_blank">Twitter</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://weibo.com/spiritast" target="_blank">微博</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.douban.com/people/iFallenAngel/" target="_blank">豆瓣</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.zhihu.com/people/mu-rong-yu-xi" target="_blank">知乎</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#用Margin还是用Padding"><span class="nav-number">1.</span> <span class="nav-text">用Margin还是用Padding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#何时应当使用margin："><span class="nav-number">1.1.</span> <span class="nav-text">何时应当使用margin：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#何时应当时用padding："><span class="nav-number">1.2.</span> <span class="nav-text">何时应当时用padding：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#margin在块元素、内联元素中的区别"><span class="nav-number">2.</span> <span class="nav-text">margin在块元素、内联元素中的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的浏览器下margin出现的bug"><span class="nav-number">3.</span> <span class="nav-text">常见的浏览器下margin出现的bug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6中双边距Bug："><span class="nav-number">3.1.</span> <span class="nav-text">IE6中双边距Bug：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6中浮动元素3px间隔Bug："><span class="nav-number">3.2.</span> <span class="nav-text">IE6中浮动元素3px间隔Bug：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6/7负margin隐藏Bug："><span class="nav-number">3.3.</span> <span class="nav-text">IE6/7负margin隐藏Bug：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6/7下ul/ol标记消失bug："><span class="nav-number">3.4.</span> <span class="nav-text">IE6/7下ul/ol标记消失bug：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6/7下margin与absolute元素重叠bug："><span class="nav-number">3.5.</span> <span class="nav-text">IE6/7下margin与absolute元素重叠bug：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE6/7/8下auto_margin居中bug："><span class="nav-number">3.6.</span> <span class="nav-text">IE6/7/8下auto margin居中bug：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8下input[button_|_submit]_设置margin:auto无法居中"><span class="nav-number">3.7.</span> <span class="nav-text">IE8下input[button | submit] 设置margin:auto无法居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE8百分比padding垂直margin_bug："><span class="nav-number">3.8.</span> <span class="nav-text">IE8百分比padding垂直margin bug：</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp; 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">慕容羽兮</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>
