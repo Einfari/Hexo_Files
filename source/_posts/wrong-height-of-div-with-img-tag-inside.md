@@ -1,7 +1,7 @@
 title: "div块与内部的img元素高度不一致问题"
 date: 2015-07-07 11:08:52
 categories: 
-- 技术
+- 技术笔记
 tags:
 - 技术
 - CSS
