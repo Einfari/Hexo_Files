@@ -261,7 +261,7 @@ s.substring(7); //从索引7开始到结束，返回'World!'
 
 ```js
 var s = 'Hello, World!';
-s.substr(7, 5); //从所以7开始，截取5个字符，返回'World'
+s.substr(7, 5); //从索引7开始，截取5个字符，返回'World'
 ```
 
 # 数组
