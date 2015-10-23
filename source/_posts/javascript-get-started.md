@@ -141,9 +141,125 @@ ECMA在后续的规范中推出了strict模式，强制变量必须通过 `var` 
 启用strict模式的方法是在JavaScript代码的第一行加上：
 
 ```js
-'use strict`
+'use strict'
 ```
 
 这是一个字符串，不支持strict模式的浏览器将会把它当作一个字符串来进行解释，支持strict模式的浏览器将在开启strict模式运行JavaScript。
 
 建议在所有的JavaScript代码中都使用strict模式。
+
+# 字符串
+
+JavaScript的字符串就是通过`''`或者`""`括起来的字符表示。
+
+如果`'`本身也是一个字符，那就可以使用`""`括起来，比如`"I'm OK"`包含的字符就是`I`，`'`，`m`，空格，`O`，`K`这6个字符。
+
+如果字符串内部既包含`'`又包含`"`怎么办？可以使用转义字符`\`来标识，比如：
+
+```js
+'I\'m \"OK\"!';
+```
+
+表示的字符串内容是`I'm "OK"!`
+
+转义字符`\`可以转义很多字符，比如`\n`表示换行，`\t`表示制表符，字符`\`本身也需要转义，所以`\\`表示的字符就是`\`；
+
+ASCII字符都可以通过`\x##`的十六进制形式表示，比如:
+
+```js
+`\x41`; //完全等同于 'A'
+```
+
+还可以用`\u####`表示一个Unicode字符：
+
+```js
+`\u4e2d\u6587`;  //完全等同于 '中文'
+```
+
+由于多行字符串用`\n`写起来麻烦，所以最新的ES6标准新增了一种多行字符串的表示方法，用`` `...` ``表示：
+
+```js
+`这是一个
+多行
+字符串`;
+```
+
+## 字符串的常见操作
+
+```js
+var s = 'hello, world!';
+s.length;  //13
+s.length(); //Uncaught TypeError: s.length() is not a function(...), length 是字符串的一个属性，而不是方法
+```
+
+要获取字符串某个指定位置的字符，使用类似Array的下标操作，索引号从0开始：
+
+```js
+var s = 'Hello, World!';
+
+s[0];  //'H'
+s[6];  //' '
+s[7];  //'W'
+s[12]; //'!'
+s[13]; //undefined 超出范围的索引不会报错，但是一律返回undefined
+```
+
+*需要特别注意的是* 字符串是不可变的，如果对字符串的某个索引赋值，不会又任何错误，但是，也不会又任何效果:
+
+```
+var s = 'Test';
+s[0] = 'X';
+alert(s); //s仍然为'Test‘
+```
+
+JavaScript 为字符串提供了一些常用的方法，注意，调用这些方法并不会改变原来字符串的内容，而是返回一个新的字符串。
+
+### toUpperCase
+
+`toUpperCase`把一个字符串全部变成大写
+
+```js
+var s = 'Hello';
+s.toUpperCase(); // 返回新的字符串'HELLO',s仍然为'Hello'
+```
+
+### toLowerCase
+
+`toLowerCase`把一个字符串全部变成小写
+
+```js
+var s = 'Hello';
+var lower = s.toLowerCase();  //返回新的字符串'hello'并赋值给lower
+alert(lower); //'hello'
+```
+
+### indexOf
+
+`indexOf()`返回指定字符串出现的*位置*
+
+```js
+var s = 'Hello, World!';
+s.indexOf('World'); //返回7
+s.indexOf('world'); //没有找到字符串，返回-1
+```
+
+### substring
+
+`substring`返回指定索引区间的子串
+
+```js
+var s = 'Hello, World!';
+s.substring(0, 5); // 从索引0开始到5（不包括5），返回'Hello'
+s.substring(7); //从索引7开始到结束，返回'World!'
+```
+
+### substr
+
+`substr`返回从指定索引开始的n个字符组成的子串
+
+`substr`与`substring`相似，都是返回字符串的子串，不同的是，`substring`的参数是两个索引值（如果只有一个的话，默认第二个为字符串的长度), `substr`的第一个参数为起始索引值，第二个参数为要截取的子串的长度，例如:
+
+```js
+var s = 'Hello, World!';
+s.substr(7, 5); //从所以7开始，截取5个字符，返回'World'
+```
