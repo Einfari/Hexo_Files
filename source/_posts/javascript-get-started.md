@@ -263,3 +263,67 @@ s.substring(7); //从索引7开始到结束，返回'World!'
 var s = 'Hello, World!';
 s.substr(7, 5); //从所以7开始，截取5个字符，返回'World'
 ```
+
+# 数组
+
+JavaScript的数组可以包含任意数据类型，并通过索引来访问每个元素。
+
+要获得数组的长度，直接访问`length`属性：
+
+```js
+var arr = [1, 2, 3.14, 'Hello', null, true];
+arr.length;  //6
+```
+
+请注意，如果直接给`Array`的`length`属性赋一个新值会导致`Array`的大小发生变化：
+
+```js
+var arr = [1, 2, 3];
+arr.length;  //3
+arr.length = 6; 
+arr; //arr变为[1, 2, 3, undefined, undefined, undefined]
+arr.length = 2;
+arr; //arr变为[1, 2]
+```
+
+`Array`可以通过索引把对应的元素修改为新的值， 因此，对`Array`的索引进行赋值会直接修改这个`Array`：
+
+```js
+var arr = ['A', 'B', 'C'];
+arr[1] = 99;
+arr; //arr现在变为['A', 99, 'C']
+```
+
+请注意，通过索引赋值时，如果索引超过了范围，同样会引起`Array`大小的变化：
+
+```js
+var arr = [1, 2, 3];
+arr[5] = 'X';
+arr; //arr变为[1, 2, 3, undefined, undefined, 'X']
+```
+
+大多数的编程语言不允许直接修改数组的大小，越界访问索引会报错。但是，JavaScript的`Array`不会有任何报错。在编写代码时，不建议直接修改`Array`的大小，访问索引时要确保索引不会越界。
+
+### indexOf
+
+与`String`类似，`Array`也可以通过`indexOf`返回一个指定元素的*位置*
+
+```js
+var arr = [1, 2, 3, '30', 'xyz'];
+arr.indexOf(1);  //返回0
+arr.indexOf(2);  //返回1
+arr.indexOf(4);  //没有找到元素4，返回-1
+arr.indexOf('30'); //'30'的索引为3， 返回3
+```
+
+### slice
+
+`slice`对应`String`的`substring`版本，它截取`Array`的部分元素，返回一个新的`Array`：
+
+```js
+var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+arr.slice(1,3);  //返回['B', 'C'],从索引1开始，到索引3结束，不包括索引3
+arr.slice(5);  //返回['F', 'G']，从索引5开始，到数组结束
+```
+
+
