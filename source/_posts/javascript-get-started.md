@@ -326,4 +326,224 @@ arr.slice(1,3);  //返回['B', 'C'],从索引1开始，到索引3结束，不包
 arr.slice(5);  //返回['F', 'G']，从索引5开始，到数组结束
 ```
 
+如果不给`slice`传递任何参数，它就会从头到尾截取所有的元素。利用这一点，我们可以很容易的复制一个`Array`：
 
+```js
+var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+var acopy = arr.slice();
+acopy; //['A', 'B', 'C', 'D', 'E', 'F', 'G']
+acopy === arr; //false
+```
+
+### push和pop
+
+`push()`向`Array`的末尾添加若干元素，`pop`把`Array`末尾的若干元素删掉：
+
+```js
+var arr = [1, 2];
+arr.push('A', 'B'); // 返回Array新的长度: 4
+arr; // [1, 2, 'A', 'B']
+arr.pop(); // pop()返回'B'
+arr; // [1, 2, 'A']
+arr.pop(); arr.pop(); arr.pop(); // 连续pop 3次
+arr; // []
+arr.pop(); // 空数组继续pop不会报错，而是返回undefined
+arr; // []
+```
+
+### unshift和shift
+
+`unshift`向`Array`的头部添加*若干*元素，`shift`从`Array`的头部删除*第一个*元素：
+
+```js
+var arr = [1, 2];
+arr.unshift('A', 'B'); // 返回Array新的长度: 4
+arr; // ['A', 'B', 1, 2]
+arr.shift(); // 'A'
+arr; // ['B', 1, 2]
+arr.shift(); arr.shift(); arr.shift(); // 连续shift 3次
+arr; // []
+arr.shift(); // 空数组继续shift不会报错，而是返回undefined
+arr; // []
+```
+
+### sort
+
+`sort()`可以对当前`Array`进行排序，它会直接修改当前`Array`的元素位置，直接调用时，按照默认顺序排序：
+
+```js
+var arr = ['B', 'C', 'A'];
+arr.sort();
+arr; //['A', 'B', 'C']
+```
+
+### splice
+
+`splice()`是修改`Array`的“万能方法”，它可以从指定的位置开始删除若干元素，然后再从该位置添加若干元素：
+
+```js
+var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+// 从索引2开始删除3个元素,然后再添加两个元素:
+arr.splice(2, 3, 'Google', 'Facebook'); // 返回删除的元素 ['Yahoo', 'AOL', 'Excite']
+arr; // ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+// 只删除,不添加:
+arr.splice(2, 2); // ['Google', 'Facebook']
+arr; // ['Microsoft', 'Apple', 'Oracle']
+// 只添加,不删除:
+arr.splice(2, 0, 'Google', 'Facebook'); // 返回[],因为没有删除任何元素
+arr; // ['Microsoft', 'Apple', 'Google', 'Facebook', 'Oracle']
+```
+
+### concat
+
+`concat()`方法把当前的的`Array`和另一个`Array`连接起来，返回一个新的`Array`：
+
+```js
+var arr = ['A', 'B', 'C'];
+var added = arr.concat([1, 2, 3]);
+added; //['A', 'B', 'C', 1, 2, 3]
+arr; //['A', 'B', 'C']
+```
+
+请注意，`concat()`方法并没有修改当前`Array`，而是返回了一个新的`Array`。
+
+实际上，`concat()`可以接收任意个元素和`Array`，并且自动把`Array`拆开，然后全部添加到新的`Array`里:
+
+```js
+var arr = ['A', 'B', 'C'];
+arr.concat(1, 2, [3, 4]);
+arr; //['A', 'B', 'C', 1, 2, 3, 4]
+```
+
+### join
+
+`join()`方法把当前`Array`的每个元素使用指定的字符串连接起来，然后返回连接后的字符串：
+
+```js
+var arr = ['A', 'B', 'C', 1, 2, 3];
+arr.join('-'); //A-B-C-1-2-3
+```
+
+如果`Array`的元素不是字符串，将自动转换为字符串后再连接。
+
+
+## 多维数组
+
+如果数组的某个元素又是一个`Array`，则可以组成多维数组，例如：
+
+```js
+var arr = [[1, 2, 3], [400, 500, 600], '-'];
+```
+
+上述`Array`包含3个元素，其中头两个元素本身也是`Array`。
+
+练习：如何通过索引取到500这个值：
+
+
+```js
+'use strict';
+var arr = [[1, 2, 3], [400, 500, 600], '-'];
+var x = arr[1][1];
+alert(x); //500
+```
+
+`Array`提供了一种顺序存储一组元素的功能，并且可以按照索引来读写。
+
+练习：在新生欢迎晚会上，你已经拿到了新同学的名单，请排序后显示：`欢迎XXX，XXX，XXX，和XXX同学！`：
+
+```js
+'use strict';
+var arr = ['小明', '小红', '大军', '阿黄'];
+var sorted = arr.sort();
+alert('欢迎' + sorted.slice(0,3) + '和' + sorted[3] + '同学!');
+// alert('欢迎' + sorted.slice(0,3) + '和' + sorted.splice(3,1) + '同学!');
+var last = arr.pop();
+alert('欢迎' + arr + '和' + last + '同学!'); //Array在输出元素时会自动使用逗号分割
+```
+
+# 对象
+
+JavaScript的对象时一种无序的集合数据类型，它由若干键值对构成。
+
+JavaScript的对象用于描述现实世界中的对象。例如，我们可以用下面的对象表示“小明”
+
+```js
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    school: 'No.1 Middle School',
+    height: 1.70,
+    weight: 65,
+    score: null
+};
+```
+
+访问属性是通过`.`操作符完成的，但这要求属性名必须是一个有效的变量名。如果属性名包含有特殊字符，就必须使用`''`括起来：
+
+```js
+var xiaohong = {
+    name: '小红',
+    'middle-school`: 'NO.1 Middle School'
+}
+```
+
+`xiaohong`的属性名`middle-school`不是一个有效的变量，就需要使用`''`括起来。访问这个属性也不能使用`.`操作符，必须使用`['xxx']`的形式来访问：
+
+```js
+xiaohong['middle-school']; //'NO.1 Middle School'
+xiaohong['name'];  //'小红'
+xiaohong.name; //'小红'
+```
+
+访问不存在的属性不会报错，而是返回undefined;
+
+
+由于JavaScript的对象是动态类型，你可以自由地给一个对象添加或者删除属性：
+
+```js
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.age; // undefined
+xiaoming.age = 18; // 新增一个age属性
+xiaoming.age; // 18
+delete xiaoming.age; // 删除age属性
+xiaoming.age; // undefined
+delete xiaoming['name']; // 删除name属性
+xiaoming.name; // undefined
+delete xiaoming.school; // 删除一个不存在的school属性也不会报错，并且返回true
+```
+
+如果我们要检测`xiaoming`是否拥有某一属性，可以用`in`操作符：
+
+```js
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    school: 'No.1 Middle School',
+    height: 1.70,
+    weight: 65,
+    score: null
+};
+'name' in xiaoming; // true
+'grade' in xiaoming; // false
+```
+
+不过要小心，如果`in`判断一个属性存在，这个属性不一定是`xiaoming`的，它可能是`xiaoming`继承得到的：
+
+```js
+'toString' in xiaoming;  //true
+```
+
+因为`toString`定义在`object`对象中，而所有的对象最终都会在原型链上指向`object`，所以`xiaoming`也拥有`toString`属性。
+
+要判断一个属性是`xiaoming`自身拥有的，而不是继承得到的，可以使用`hasOwnProperty()`方法：
+
+```js
+var xiaoming = {
+    name: '小明';
+}
+
+xiaoming.hasOwnProperty('name');  //true
+xiaoming.hasOwnProperty('toString');  //false
+```
