@@ -108,5 +108,42 @@ person.name;  // "saturn"
 person.zipcode; // null
 ```
 
+## 变量
 
+JavaScript是动态语言，因为它的变量的类型不固定，变量可以被赋值为任意的数据类型；与之相对的是静态语言，比如Java，再声明变量的时候必须指明变量类型，而且不同类型的变量和数据不能赋值。
 
+例如JavaScript：
+
+```js
+var a = 123;  //a现在为数字
+a = "abc";  //a现在为字符串
+```
+
+例如Java:
+
+```java
+int a = 123; //a为整型。用int声明
+a = "abc";  //错误，不能把字符串赋值给整型变量
+```
+
+## strict 模式
+
+在JavaScript中如果不使用 `var` 声明变量，那么变量自动被声明为全局变量：
+
+```js
+i = 10;  //i现在是全局变量
+```
+
+在同一个页面的引用的不同的JavaScript文件中，如果都不使用 `var` 进行变量声明，而且恰好都使用了变量 `i` ，那么就会互相影响，产生难以调试的错误。
+
+ECMA在后续的规范中推出了strict模式，强制变量必须通过 `var` 进行声明，不然将导致运行错误。
+
+启用strict模式的方法是在JavaScript代码的第一行加上：
+
+```js
+'use strict`
+```
+
+这是一个字符串，不支持strict模式的浏览器将会把它当作一个字符串来进行解释，支持strict模式的浏览器将在开启strict模式运行JavaScript。
+
+建议在所有的JavaScript代码中都使用strict模式。
