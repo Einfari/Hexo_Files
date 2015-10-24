@@ -87,7 +87,7 @@ arr[6]; // 超出了索引范围，返回undefined
 
 ## 对象
 
-JavaScript的对象是一组右键-值组成的无序集合，例如：
+JavaScript的对象是一组由键-值组成的无序集合，例如：
 
 ```js
 var person = {
