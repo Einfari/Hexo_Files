@@ -4,9 +4,6 @@ categories:
 - 技术笔记
 tags:
 - 技术 HTML
-tags: 
-- html
-- 技术
 photos:
 - http://lniu.qiniudn.com/images/fancybox/007.jpg
 
