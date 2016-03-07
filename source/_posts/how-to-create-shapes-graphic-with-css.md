@@ -374,6 +374,7 @@ photos:
     background-color: lightblue;
 }
 ```
+<!-- more -->
 
 # 2.长方形
 
