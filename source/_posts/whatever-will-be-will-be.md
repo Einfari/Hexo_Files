@@ -1,4 +1,4 @@
-title: whatever will be will be
+title: Whatever will be will be
 date: 2016-03-07 17:58:42
 categories: 
 - 心情
